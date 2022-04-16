@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "title": "Mouse"
+    },
+    {
+        "id": 2,
+        "title": "Teclado"
+    },
+    {
+        "id": 3,
+        "title": "Jogos"
+    },
+    {
+        "id": 4,
+        "title": "Hardware"
+    },
+    {
+        "id": 5,
+        "title": "Monitor"
+    },
+    {
+        "id": 6,
+        "title": "Headset"
+    },
+    {
+        "id": 7,
+        "title": "Controles"
+    },
+    {
+        "id": 8,
+        "title": "Ofertas"
+    }
+]
