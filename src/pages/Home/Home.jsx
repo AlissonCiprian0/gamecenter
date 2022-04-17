@@ -5,6 +5,7 @@ import "./Home.css";
 import Hero from '../../components/Hero/Hero';
 import BannerInfo from '../../components/BannerInfo/BannerInfo';
 import Games from '../../components/Games/Games';
+import FeaturedGame from '../../components/FeaturedGame/FeaturedGame';
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             <Hero />
             <BannerInfo />
             <Games />
+            <FeaturedGame />
         </div>
     );
 }
