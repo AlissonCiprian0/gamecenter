@@ -1,8 +1,7 @@
 import React from 'react';
 import "./Hero.css";
 
-// SVGs
-import {ReactComponent as ButtonArrows} from "../../assets/svg/button_arrows.svg";
+import PrimaryButton from '../PrimaryButton/PrimaryButton';
 
 const Hero = () => {
     return (
@@ -14,10 +13,7 @@ const Hero = () => {
                     SERÁ DE ALTO NÍVEL!
                 </h1>
 
-                <button>
-                    <span>CONFERIR</span>
-                    <ButtonArrows />
-                </button>
+                <PrimaryButton classudo='lala'>CONFERIR</PrimaryButton>
             </div>
         </div>
     );

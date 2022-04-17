@@ -26,35 +26,6 @@
     display: block;
     margin-top: 5px;
 }
-.Hero-text button {
-    border: 0;
-    padding: 15px 30px;
-    background-color: var(--primary-red);
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    margin-top: 15px;
-}
-.Hero-text button span {
-    color: #fff;
-    font-weight: 700;
-    font-size: 1.5em;
-}
-.Hero-text button svg {
-    margin-left: 5px;
-}
-.Hero-text button svg path:nth-child(1) {
-    transition: .1s all ease-in-out;
-}
-.Hero-text button svg path:nth-child(2) {
-    transition: .2s all ease-in-out;
-}
-.Hero-text button:hover svg path:nth-child(1) {
-    transform: translateX(3px);
-}
-.Hero-text button:hover svg path:nth-child(2) {
-    transform: translateX(2px);
-}
 @media (max-width: 1250px) {
     .Hero {
         background-position-x: right;

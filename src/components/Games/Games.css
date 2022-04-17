@@ -1,0 +1,203 @@
+.Games {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 50px 5vw;
+    background: linear-gradient(180deg, #0C0C0C 0%, #000000 53.65%, #0E0E0E 100%);
+    color: #fff;
+}
+.Games-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Games-title h1 {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: 900;
+}
+.Games-title-divisor {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: #1C1C1C;
+    bottom: -35px;
+    display: flex;
+    align-items: center;
+}
+.Games-title-divisor span {
+    position: absolute;
+    width: 250px;
+    height: 10px;
+    background-color: var(--primary-red);
+}
+.Games-products {
+    width: 100%;
+    height: auto;
+    margin-top: 70px;
+    display: flex;
+    gap: 30px;
+}
+.Games-products-col {
+    width: 100%;
+    height: auto;
+}
+.Games-product-big {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+}
+.Games-product-big-background {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+.Games-product-big-action-area {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 25px;
+    z-index: 10;
+}
+.Games-product-big-action-area img {
+    position: relative;
+}
+.Games-product-big-action-area button {
+    margin: 0;
+}
+.Games-product {
+    border-radius: 5px;
+    background-color: #000;
+    border: 1px solid var(--primary-red);
+}
+.Games-product:not(.Games-product-big) {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.Games-product-logo {
+    position: relative;
+    height: 145px;
+    width: 50%;
+    background-color: var(--primary-red);
+    clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 30px;
+    z-index: 10;
+}
+.Games-product-logo img {
+    position: relative;
+    max-width: 150px;
+}
+.Games-product-logo .remove-bg {
+    mix-blend-mode: lighten;
+}
+.Games-product-action-area {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+.Games-product-background {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+.Games-product-action-area button {
+    position: relative;
+    z-index: 10;
+    margin-top: 85px;
+    margin-right: 8px;
+}
+@media (max-width: 1150px) {
+    .Games-products {
+        flex-direction: column;
+    }
+    .Games-products-col:nth-child(2) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1vw;
+        flex-wrap: wrap;
+    }
+    .Games-product:not(.Games-product-big) {
+        width: 49%;
+    }
+    .Games-product-logo {
+        padding-left: 1vw;
+    }
+}
+@media (max-width: 1024px) {
+    .Games-products-col:nth-child(2) {
+        gap: 1rem;
+    }
+    .Games-product:not(.Games-product-big) {
+        width: 100%;
+    }
+    .Games-product-logo {
+        padding-left: 5vw;
+    }
+}
+@media (max-width: 580px) {
+    .Games-title {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .Games-title button {
+        margin-top: 25px!important;
+    }
+    .Games-product-big-action-area {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding: 15px;
+    }
+    .Games-product-big-action-area img {
+        margin-left: -12px;
+    }
+    .Games-product-big-action-area button {
+        margin-top: 15px;
+    }
+}
+@media (max-width: 540px) {
+    .Games-product:not(.Games-product-big) {
+        height: 240px;
+        display: flex;
+        flex-direction: column;
+        justify-content: inherit;
+    }
+    .Games-product-logo {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        clip-path: none;
+        height: 94px;
+        order: 2;
+    }
+    .Games-product-logo img {
+        max-width: 25vw;
+    }
+    .Games-product-action-area {
+        right: inherit;
+        position: relative;
+        order: 1;
+        z-index: 100;
+    }
+    .Games-product-action-area button {
+        position: absolute;
+        z-index: 100;
+        margin: 0;
+        margin-top: 168px;
+        right: 15px;
+        border: 1px solid #fff;
+    }
+}

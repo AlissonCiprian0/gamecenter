@@ -62,6 +62,13 @@
       "price": 115.8,
       "score": 290,
       "image": "horizon-zero-dawn.png"
+    },
+    {
+      "id": 620,
+      "name": "League of Legends",
+      "price": "Free to play",
+      "score": 290,
+      "image": "horizon-zero-dawn.png"
     }
   ]
 }
