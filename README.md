@@ -5,6 +5,12 @@ Para fins de estudo apenas.
 
 #### 🤖 Ainda em desenvolvimento... 🤖
 
+- [Requisitos](#requisitos)
+- [Tecnologias](#tecnologias)
+- [Link de acesso](#access-link)
+- [Telas](#screens)
+- [Principais componentes](#components)
+
 Projeto realizado para o Desafio Supera - Processo Seletivo.
 
 <a name="requisitos"/>
@@ -31,6 +37,8 @@ Projeto realizado para o Desafio Supera - Processo Seletivo.
 
 ## Você pode acessar o projeto por esse link
 [Game Center](https://625cb56b7298304cae7578c9--dapper-strudel-f37712.netlify.app/ "Game Center").
+
+<a name="screens"/>
 
 ## Telas
 <h1 align="center">
