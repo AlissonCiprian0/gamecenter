@@ -1,15 +1,1 @@
-.BannerInfo {
-    width: 100%;
-    height: 130px;
-    box-sizing: border-box;
-    padding: 30px 5vw;
-    background-color: #0A0A0A;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.BannerInfo .splide__slide {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-}
+.BannerInfo {width: 100%;height: 130px;box-sizing: border-box;padding: 30px 5vw;background-color: #0A0A0A;display: flex;align-items: center;justify-content: center;}.BannerInfo .splide__slide {margin: 0 auto;display: flex;justify-content: center;}

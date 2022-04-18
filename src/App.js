@@ -1,9 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 
-// Router
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 // Cart context
 import CartContext from "./Context";
 
