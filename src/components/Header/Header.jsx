@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import "./Header.css";
+
+// Cart context
+import CartContext from '../../Context';
 
 // Icons
 import {ReactComponent as LogoIcon} from "../../assets/svg/logoWhite.svg";
@@ -11,6 +14,8 @@ import {ReactComponent as HeaderArrowIcon} from "../../assets/svg/headerArrow.sv
 import categories from '../../categories.json';
 
 const Header = ({mini}) => {
+    const { cart, setShowCart } = useContext(CartContext);
+
     return (
         <div className={`Header ${mini ? 'mini' : ''}`}>
             <div className='Header-container'>
@@ -25,10 +30,10 @@ const Header = ({mini}) => {
                             <span>Minha Conta</span>
                         </button>
                         
-                        <button className='Header-cart'>
+                        <button className='Header-cart' onClick={() => {setShowCart(true)}}>
                             <CartIcon />
 
-                            <span>0</span>
+                            <span>{cart.quantity}</span>
                         </button>
                     </div>
                 </div>

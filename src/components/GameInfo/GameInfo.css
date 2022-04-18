@@ -1,0 +1,160 @@
+.GameInfo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+    background-color: #000000de;
+    backdrop-filter: saturate(200%) blur(2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.GameInfo-window {
+    position: relative;
+    width: 80vw;
+    height: 500px;
+    background-color: #fff;
+    border-radius: 2px;
+    display: flex;
+}
+.GameInfo-close {
+    border: 0;
+    background-color: var(--primary-red);
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.5em;
+    font-family: 'Inter';
+    position: absolute;
+    right: 1.5%;
+    top: -3%;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.GameInfo-image {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+.GameInfo-image img {
+    position: absolute;
+    left: -4px;
+    top: -1px;
+    width: 100%;
+    height: 101%;
+    object-fit: cover;
+    object-position: left;
+}
+.GameInfo-content {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 5vw;
+    display: flex;
+    flex-direction: column;
+}
+.GameInfo-title {
+    font-weight: 800;
+    font-size: 2em;
+}
+.GameInfo-description {
+    display: block;
+    margin-top: 8px;
+    color: #4E4E4E;
+}
+.GameInfo-price {
+    display: block;
+    margin-top: 50px;
+    font-weight: 800;
+}
+.GameInfo-price i {
+    font-style: inherit;
+    font-size: 3em;
+    color: var(--primary-red);
+}
+.GameInfo-quantity {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+.GameInfo-quantity button {
+    width: 50px;
+    height: 50px;
+    border: 0;
+    background-color: var(--primary-red);
+    color: #fff;
+    font-weight: 800;
+    font-family: 'Inter';
+    font-size: 2em;
+    cursor: pointer;
+}
+.GameInfo-quantity button:nth-child(1) {
+    border-radius: 2px 0 0 2px;
+}
+.GameInfo-quantity button:nth-child(3) {
+    border-radius: 0 2px 2px 0;
+}
+.GameInfo-quantity input {
+    position: relative;
+    width: 25%;
+    height: 48px;
+    border: 0;
+    background-color: #ECECEC;
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 1em;
+}
+.GameInfo-quantity input::-webkit-outer-spin-button,
+.GameInfo-quantity input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.GameInfo-quantity input[type=number] {
+  -moz-appearance: textfield;
+}
+@media (max-width: 768px) {
+    .GameInfo-image {
+        width: 20%;
+    }
+    .GameInfo-content {
+        width: 80%;
+    }
+}
+@media (max-width: 550px) {
+    .GameInfo-window {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .GameInfo-close {
+        z-index: 1;
+    }
+    .GameInfo-image {
+        width: 100%;
+        height: auto;
+    }
+    .GameInfo-image img {
+        position: relative;
+        left: auto;
+        top: auto;
+    }
+    .GameInfo-content {
+        width: 100%;
+        font-size: 4vw;
+    }
+    .GameInfo-title {
+        font-size: 1.5em;
+    }
+    .GameInfo-price {
+        margin-top: 5%;
+        font-size: .8em;
+    }
+    .GameInfo-buy-button {
+        font-size: .8em;
+    }
+}

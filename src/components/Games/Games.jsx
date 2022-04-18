@@ -3,17 +3,24 @@ import "./Games.css";
 
 import PrimaryButton from '../PrimaryButton/PrimaryButton';
 
-// Games images
-import Lol_image from "../../assets/games/lol-big.png";
-import Lol_logo from "../../assets/png/lol-logo.png";
-import CS_image from "../../assets/games/cs-small.png";
-import CS_logo from "../../assets/png/cs-logo.png";
-import COD_image from "../../assets/games/cod-small.png";
-import COD_logo from "../../assets/png/cod-logo.png";
-import ER_image from "../../assets/games/er-small.png";
-import ER_logo from "../../assets/png/er-logo.png";
+// Data
+import products from '../../products.json';
 
-const Games = () => {
+// Icons
+import {ReactComponent as InfoIcon} from "../../assets/svg/info.svg";
+
+const Games = ({selectGame}) => {
+    const gamesToShow = [products.Games[10], products.Games[1], products.Games[11]];
+
+    // Handle game selection
+    const handleGameSelection = (id) => {
+        // window.history.go('http://localhost:3000/');
+        async function changeHistory() {
+            window.history.replaceState(null, null, "?id="+id)
+        }
+        changeHistory().then(selectGame());
+    }
+
     return (
         <div className='Games'>
             <div className='Games-title'>
@@ -24,49 +31,35 @@ const Games = () => {
 
             <div className='Games-products'>
                 <div className='Games-products-col'>
-                    <div className='Games-product Games-product-big'>
-                        <img src={Lol_image} className='Games-product-big-background' />
+                    <div className='Games-product Games-product-big' onClick={() => handleGameSelection(products.Games[9].id)}>
+                        <img src={products.Games[9].imageBig} className='Games-product-big-background' />
+
+                        <InfoIcon className='Games-product-infoIcon' />
 
                         <div className='Games-product-big-action-area'>
-                            <img src={Lol_logo} />
+                            <img src={products.Games[9].logo} />
                             <PrimaryButton>CONFERIR</PrimaryButton>
                         </div>
                     </div>
                 </div>
 
                 <div className='Games-products-col'>
-                    <div className='Games-product'>
-                        <div className='Games-product-logo'>
-                            <img src={CS_logo} className='remove-bg' />
-                        </div>
-                        
-                        <div className='Games-product-action-area'>
-                            <img src={CS_image} className='Games-product-background' />
-                            <PrimaryButton>CONFERIR</PrimaryButton>
-                        </div>
-                    </div>
+                    {
+                        gamesToShow.map((game) => (
+                            <div className='Games-product' key={game.id} onClick={() => handleGameSelection(game.id)}>
+                                <InfoIcon className='Games-product-infoIcon' />
 
-                    <div className='Games-product'>
-                        <div className='Games-product-logo'>
-                            <img src={COD_logo} />
-                        </div>
-
-                        <div className='Games-product-action-area'>
-                            <img src={COD_image} className='Games-product-background' />
-                            <PrimaryButton>CONFERIR</PrimaryButton>
-                        </div>
-                    </div>
-
-                    <div className='Games-product'>
-                        <div className='Games-product-logo'>
-                            <img src={ER_logo} className='remove-bg' />
-                        </div>
-
-                        <div className='Games-product-action-area'>
-                            <img src={ER_image} className='Games-product-background' />
-                            <PrimaryButton>CONFERIR</PrimaryButton>
-                        </div>
-                    </div>
+                                <div className='Games-product-logo'>
+                                    <img src={game.logo} />
+                                </div>
+                                
+                                <div className='Games-product-action-area'>
+                                    <img src={game.imageSmall} className='Games-product-background' />
+                                    <PrimaryButton>CONFERIR</PrimaryButton>
+                                </div>
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
         </div>

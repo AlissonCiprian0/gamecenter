@@ -36,3 +36,6 @@
 .PrimaryButton.FeaturedGame-button {
     margin-top: 30px;
 }
+.GameInfo-buy-button svg {
+    display: none;
+}

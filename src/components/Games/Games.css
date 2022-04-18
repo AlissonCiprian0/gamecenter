@@ -45,7 +45,6 @@
 }
 .Games-product-big {
     position: relative;
-    overflow: hidden;
     height: 400px;
 }
 .Games-product-big-background {
@@ -75,10 +74,43 @@
     border-radius: 5px;
     background-color: #000;
     border: 1px solid var(--primary-red);
+    cursor: pointer;
+}
+.Games-product:hover img {
+    filter: brightness(1.5);
+}
+.Games-product:hover .Games-product-infoIcon {
+    opacity: 1;
+}
+.Games-product:hover::before {
+    opacity: 1;
+}
+.Games-product-infoIcon {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 10;
+    transition: .1s all ease-in-out;
+    opacity: 0;
+}
+.Games-product:before {
+    background: none;
+    content: "";
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    border: 2px solid #a7a7a7c4;
+    border-radius: 8px;
+    opacity: 0;
+    transition: .1s all ease-in-out;
+    z-index: 100;
 }
 .Games-product:not(.Games-product-big) {
     position: relative;
-    overflow: hidden;
     margin-bottom: 15px;
 }
 .Games-product-logo {

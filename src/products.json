@@ -12,7 +12,11 @@
       "name": "Call Of Duty Infinite Warfare",
       "price": 49.99,
       "score": 80,
-      "image": "call-of-duty-infinite-warfare.png"
+      "image": "call-of-duty-infinite-warfare.png",
+      "imageSmall": "assets/games-session/cod-small.png",
+      "productImage": "assets/games-session/cod-product-image.png",
+      "cartImage": "assets/games-cart-images/call-of-duty-infinite-warfare.png",
+      "logo": "assets/games-session/cod-logo.png"
     },
     {
       "id": 102,
@@ -66,9 +70,35 @@
     {
       "id": 620,
       "name": "League of Legends",
-      "price": "Free to play",
+      "description": "League of Legends é um jogo em equipes com mais de 140 Campeões com os quais você pode fazer jogadas insanas.",
+      "price": 59.90,
       "score": 290,
-      "image": "horizon-zero-dawn.png"
+      "imageBig": "assets/games-session/lol-big.png",
+      "productImage": "assets/games-session/lol-product-image.png",
+      "cartImage": "assets/games-cart-images/lol.png",
+      "logo": "assets/games-session/lol-logo.png"
+    },
+    {
+      "id": 625,
+      "name": "Counter-Strike: Global Offensive",
+      "price": 59.90,
+      "score": 80,
+      "image": "call-of-duty-infinite-warfare.png",
+      "imageSmall": "assets/games-session/cs-small.png",
+      "productImage": "assets/games-session/cs-product-image.png",
+      "cartImage": "assets/games-cart-images/cs-go.png",
+      "logo": "assets/games-session/cs-logo.png"
+    },
+    {
+      "id": 635,
+      "name": "Elden Ring",
+      "price": 249.90,
+      "score": 80,
+      "image": "call-of-duty-infinite-warfare.png",
+      "imageSmall": "assets/games-session/er-small.png",
+      "productImage": "assets/games-session/er-product-image.png",
+      "cartImage": "assets/games-cart-images/er.png",
+      "logo": "assets/games-session/er-logo.png"
     }
   ]
 }

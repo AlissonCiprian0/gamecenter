@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 
-// Data
-import products from './products.json'
+// Router
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+// Cart context
+import CartContext from "./Context";
 
 // Pages
 import Home from './pages/Home/Home';
@@ -12,6 +15,8 @@ import Header from './components/Header/Header';
 
 function App() {
   const [miniHeader, setMiniHeader] = useState(false);
+  const [cart, setCart] = useState({list: [], quantity: 0, total: 0});
+  const [showCart, setShowCart] = useState(false);
 
   useEffect(() => {
     const scrollListener = () => {
@@ -32,9 +37,11 @@ function App() {
 
   return (
     <div className="App">
-      <Header mini={miniHeader} />
+      <CartContext.Provider value={{cart, setCart, showCart, setShowCart}}>
+        <Header mini={miniHeader} />
 
-      <Home />
+        <Home />
+      </CartContext.Provider>
     </div>
   );
 }
